@@ -88,7 +88,7 @@ function render( $data ) {
 
   // Custom attributes merging
   if (!empty($data['custom_atts'])) {
-    $pre_atts = array_merge($pre_atts, json_decode($data['custom_atts'], true));
+    $pre_atts = array_merge($pre_atts, cs_maybe_json_decode($data['custom_atts']));
   }
 
   // Preview attributes
